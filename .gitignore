@@ -1,0 +1,26 @@
+```gitignore
+# Node.js dependencies
+node_modules/
+
+# Visual Studio Code
+.vscode/
+
+# Environment variables
+.env
+
+# Log files
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# SQLite temporary files
+*.sqlite-journal
+
+# Optional database
+# Uncomment if you do not want to upload the database
+# database.db
+```
