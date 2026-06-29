@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack v1.1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌱 EcoTrack</h1>
+    <p>Sistem Monitoring Sampah Berbasis Web</p>
+</header>
+
+<div class="container">
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <h3>Total Data</h3>
+            <span id="totalData">0</span>
+        </div>
+
+        <div class="stat-box">
+            <h3>Total Berat</h3>
+            <span id="totalBerat">0</span> Kg
+        </div>
+
+        <div class="stat-box">
+            <h3>Organic</h3>
+            <span id="organicCount">0</span>
+        </div>
+
+        <div class="stat-box">
+            <h3>Plastic</h3>
+            <span id="plasticCount">0</span>
+        </div>
+
+        <div class="stat-box">
+            <h3>Paper</h3>
+            <span id="paperCount">0</span>
+        </div>
+
+        <div class="stat-box">
+            <h3>Others</h3>
+            <span id="othersCount">0</span>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Input Data Sampah</h2>
+
+        <div id="alert" class="alert success"></div>
+
+        <input
+            type="text"
+            id="lokasi"
+            placeholder="Masukkan Lokasi">
+
+        <select id="jenis">
+            <option value="Organic">Organic</option>
+            <option value="Plastic">Plastic</option>
+            <option value="Paper">Paper</option>
+            <option value="Others">Others</option>
+        </select>
+
+        <input
+            type="number"
+            id="berat"
+            placeholder="Berat (Kg)"
+            min="0.1"
+            step="0.1">
+
+        <button onclick="tambahData()">
+            Simpan Data
+        </button>
+
+        <button
+            class="delete-btn"
+            onclick="hapusSemuaData()">
+            Hapus Semua Data
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Data Sampah</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Lokasi</th>
+                    <th>Kategori</th>
+                    <th>Berat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="listData"></tbody>
+
+        </table>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Waste Category Summary</h2>
+
+        <ul id="summaryList"></ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
